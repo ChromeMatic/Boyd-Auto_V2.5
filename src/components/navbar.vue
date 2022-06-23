@@ -21,7 +21,6 @@
 
 <template>
     <div class="sticky top-0 z-50">
-
      <div :class="darkMode.isDark ?  'dark:bg-innerDark text-white' : '' " class="px-4 py-2 bg-gray-100 font-FT">
          <nav :class="darkMode.isDark ? 'dark:bg-darkMode' : '' " class="px-4 py-4 rounded bg-white flex justify-between items-center">
         
@@ -114,6 +113,5 @@
                 </div>
          </div>
      </div>
-
     </div>
 </template>
