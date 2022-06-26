@@ -5,19 +5,139 @@
 </script>
 
 <template>
-    <div :class="darkMode.isDark ? ' dark dark:bg-darkMode' : ''" class="flex flex-col justify-center items-center p-16 ">
+    <div :class="darkMode.isDark ? ' dark dark:bg-darkMode' : ''" 
+         class="flex justify-center items-center lg:space-y-4 flex-col 
+          px-8 py-8 xs:py-4 sm:space-y-2 scroll-smooth xl:h-full"
+    >
       
-        <h1 :class="darkMode.isDark ? ' dark:text-white ' : ''" class="text-7xl font-FT text-gray-500">
-            Welcome To Boyd Auto 
-        </h1>
+        <div :class="darkMode.isDark ? 'dark:bg-innerDark text-white' : ''"
+             class="lg:py-8 lg:px-16 xs:py-4 xs:px-8 rounded-md uppercase font-FT flex  flex-col space-y-2 
+                    justify-center items-center"
+        >
+           <h1 class="lg:text-7xl xs:text-4xl text-center">
+                Welcome to boyd-Auto
+           </h1>
+
+           <lord-icon
+                src="https://cdn.lordicon.com/tqywkdcz.json"
+                trigger="hover"
+                style="width:250px;height:250px">
+            </lord-icon>
+
+           <p class="lg:text-xl xs:text-lg text-center">
+            your one stop place where you can get the car of your dreams.
+           </p>
+
+          
+            <button :class="darkMode.isDark ? 'bg-yellow-500' : '' " 
+                    class="rounded-sm uppercase font-FT font-semibold w-64 py-2"
+            >
+               <h1>get started</h1>
+            </button>
+
+        </div>
        
-       <div v-if="darkMode.isDark === false">
-            <img class="h-96 w-96" src="../assets/DarkModecars.svg" />
+       <div :class="darkMode.isDark ? 'text-white' : ''"
+        class="text-4xl font-FT uppercase font-semibold pt-16 text-center">
+        <h1> Here at boyd-Auto we offer</h1>
        </div>
-       <div v-else>
-           <img class="h-96 w-96" src="../assets/LightMode.svg" />
+
+       <div class="grid xl:grid-cols-4 lg:grid-cols-3 xs:grid-cols-1 md:grid-cols-2 gap-2">
+
+            <div :class="darkMode.isDark ? 'bg-innerDark ' : ''"
+             class="rounded h-64 w-72 mt-8 shadow flex flex-col justify-center items-center">
+               
+               <h1 :class="darkMode.isDark ? 'text-white' : ''" 
+                    class="font-FT uppercase text-xl font-semibold">
+                    Shipping  
+                </h1>
+
+                <lord-icon
+                    src="https://cdn.lordicon.com/hqelaqlb.json"
+                    trigger="hover"
+                    colors="primary:#3a3347,secondary:#646e78,tertiary:#e8e230,quaternary:#4bb3fd,quinary:#ebe6ef"
+                    style="width:150px;height:150px">
+                </lord-icon>
+
+                <p
+                 :class="darkMode.isDark ? 'text-white' : ''" 
+                 class="font-FT uppercase text-sm font-semibold"
+                >
+                    we can get the right vehicle for you.
+                </p>
+                    
+            </div>
+
+           
+            <div :class="darkMode.isDark ? 'bg-innerDark' : ''"
+            class="rounded h-64 w-72 mt-8 shadow flex flex-col justify-center items-center ">
+
+                <h1 :class="darkMode.isDark ? 'text-white' : ''" 
+                    class="font-FT uppercase text-xl font-semibold">
+                    Inventory
+                </h1>
+
+                <lord-icon
+                    src="https://cdn.lordicon.com/ggihhudh.json"
+                    trigger="hover"
+                    style="width:150px;height:150px">
+                </lord-icon>
+
+                <p
+                 :class="darkMode.isDark ? 'text-white' : ''" 
+                  class="font-FT uppercase text-sm font-semibold"
+                >
+                  View our inventory.
+                </p>
+                    
+            </div>
+
+            <div :class="darkMode.isDark ? 'bg-innerDark' : ''"
+            class="rounded h-64 w-72 mt-8 shadow flex flex-col justify-center items-center ">
+
+                <h1 :class="darkMode.isDark ? 'text-white' : ''" 
+                    class="font-FT uppercase text-xl font-semibold">
+                    saving
+                </h1>
+
+                <lord-icon
+                    src="https://cdn.lordicon.com/qnlcdeqi.json"
+                    trigger="hover"
+                    style="width:150px;height:150px">
+                </lord-icon>
+
+                <p
+                 :class="darkMode.isDark ? 'text-white' : ''" 
+                  class="font-FT uppercase text-sm font-semibold"
+                >
+                   We offer unbeatable savings.
+                </p>
+                    
+            </div>
+
+            <div :class="darkMode.isDark ? 'bg-innerDark ' : ''"
+            class="rounded h-64 w-72  mt-8 shadow flex flex-col justify-center items-center">
+                
+                <h1 :class="darkMode.isDark ? 'text-white' : ''" 
+                    class="font-FT uppercase text-xl font-semibold">
+                    Custom Order
+                </h1>
+
+                <lord-icon
+                    src="https://cdn.lordicon.com/flvisirw.json"
+                    trigger="hover"
+                    style="width:150px;height:150px">
+                </lord-icon>
+
+                <p
+                 :class="darkMode.isDark ? 'text-white' : ''" 
+                  class="font-FT uppercase text-sm font-semibold text-center"
+                >
+                   Need a vechile to fit your needs feel free to conatact us.
+                </p>
+            </div>
+
        </div>
-    
 
     </div>
 </template>
