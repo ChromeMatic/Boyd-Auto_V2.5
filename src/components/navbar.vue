@@ -71,7 +71,7 @@
   
             <!-- Visible on mobile view -->
             <div class="md:hidden items-center">
-                 <button @click="show = !show" :class="darkMode.isDark ? 'dark:bg-innerDark dark:text-yellow-500' : ''" class="bg-gray-50 rounded p-2">
+                 <button @click="show = !show" :class="darkMode.isDark ? 'dark:bg-innerDark dark:text-yellow-500' : 'text-purple-600'" class="bg-gray-50 rounded p-2">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
                       <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
                     </svg>
