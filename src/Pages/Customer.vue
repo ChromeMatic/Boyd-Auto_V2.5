@@ -62,13 +62,13 @@
             :src="car.img"
           />
 
-          <h2 class="font-semibold text-lg">
+          <h2 class="font-semibold text-lg text-center">
             Price : {{car.price}}
           </h2>
 
           <button
           :class="darkMode.isDark ? 'dark:bg-yellow-500 text-black':'bg-purple-600 text-white'"
-           class="rounded-sm px-20"
+           class="rounded-sm px-16"
           >
             <h1 
               class="uppercase font-bold"
