@@ -12,25 +12,31 @@
       
         <div :class="darkMode.isDark ? 'dark:bg-innerDark text-white' : ''"
              class="lg:py-8 lg:px-16 xs:py-4 xs:px-8 rounded-md uppercase font-FT flex  flex-col space-y-2 
-                    justify-center items-center"
+                    justify-center items-center bg-blue-100"
         >
-           <h1 class="lg:text-7xl xs:text-4xl text-center">
+           <h1 
+             :class="darkMode.isDark ? 'text-yellow-500' : 'text-purple-600'"
+             class="lg:text-7xl xs:text-4xl text-center ">
                 Welcome to boyd-Auto
            </h1>
 
            <lord-icon
-                src="https://cdn.lordicon.com/tqywkdcz.json"
+                src="https://cdn.lordicon.com/xxdqfhbi.json"
                 trigger="hover"
+                colors="outline:#629110,primary:#7166ee,secondary:#ffc738,tertiary:#16c72e,quaternary:#e8b730"
                 style="width:250px;height:250px">
             </lord-icon>
 
-           <p class="lg:text-xl xs:text-lg text-center">
+           <p
+             :class="darkMode.isDark ? 'text-yellow-500':'text-purple-600'" 
+             class="lg:text-xl xs:text-lg text-center font-semibold"
+            >
             your one stop place where you can get the car of your dreams.
            </p>
 
           
-            <button :class="darkMode.isDark ? 'bg-yellow-500' : '' " 
-                    class="rounded-sm uppercase font-FT font-semibold w-64 py-2"
+            <button :class="darkMode.isDark ? 'bg-yellow-500' : 'bg-purple-600' " 
+             class="rounded-sm uppercase font-FT font-semibold w-64 py-2  text-white"
             >
                <h1>get started</h1>
             </button>
@@ -44,8 +50,8 @@
 
        <div class="grid xl:grid-cols-4 lg:grid-cols-3 xs:grid-cols-1 md:grid-cols-2 gap-2">
 
-            <div :class="darkMode.isDark ? 'bg-innerDark ' : ''"
-             class="rounded h-64 w-72 mt-8 shadow flex flex-col justify-center items-center">
+            <div :class="darkMode.isDark ? 'bg-innerDark ' : 'bg-blue-300'"
+             class="rounded h-64 w-72 mt-8 shadow-md flex flex-col justify-center items-center">
                
                <h1 :class="darkMode.isDark ? 'text-white' : ''" 
                     class="font-FT uppercase text-xl font-semibold">
@@ -67,10 +73,9 @@
                 </p>
                     
             </div>
-
            
-            <div :class="darkMode.isDark ? 'bg-innerDark' : ''"
-            class="rounded h-64 w-72 mt-8 shadow flex flex-col justify-center items-center ">
+            <div :class="darkMode.isDark ? 'bg-innerDark' : 'bg-blue-300'"
+            class="rounded h-64 w-72 mt-8 shadow-md flex flex-col justify-center items-center ">
 
                 <h1 :class="darkMode.isDark ? 'text-white' : ''" 
                     class="font-FT uppercase text-xl font-semibold">
@@ -80,6 +85,7 @@
                 <lord-icon
                     src="https://cdn.lordicon.com/ggihhudh.json"
                     trigger="hover"
+                    colors="primary:#16c72e,secondary:#629110,tertiary:#ebe6ef"
                     style="width:150px;height:150px">
                 </lord-icon>
 
@@ -92,8 +98,8 @@
                     
             </div>
 
-            <div :class="darkMode.isDark ? 'bg-innerDark' : ''"
-            class="rounded h-64 w-72 mt-8 shadow flex flex-col justify-center items-center ">
+            <div :class="darkMode.isDark ? 'bg-innerDark' : 'bg-blue-300 '"
+            class="rounded h-64 w-72 mt-8 shadow-md  flex flex-col justify-center items-center ">
 
                 <h1 :class="darkMode.isDark ? 'text-white' : ''" 
                     class="font-FT uppercase text-xl font-semibold">
@@ -115,8 +121,8 @@
                     
             </div>
 
-            <div :class="darkMode.isDark ? 'bg-innerDark ' : ''"
-            class="rounded h-64 w-72  mt-8 shadow flex flex-col justify-center items-center">
+            <div :class="darkMode.isDark ? 'bg-innerDark ' : 'bg-blue-300'"
+            class="rounded h-64 w-72  mt-8 shadow-md   flex flex-col justify-center items-center">
                 
                 <h1 :class="darkMode.isDark ? 'text-white' : ''" 
                     class="font-FT uppercase text-xl font-semibold">
