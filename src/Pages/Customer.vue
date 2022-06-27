@@ -62,7 +62,7 @@
             :src="car.img"
           />
 
-          <h2 class="font-semibold text-lg">
+          <h2 class="font-semibold text-lg text-center">
             Price : {{car.price}}
           </h2>
 
