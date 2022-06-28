@@ -5,7 +5,7 @@
 </script>
 
 <template>
-    <div :class="darkMode.isDark ? ' dark dark:bg-darkMode' : ''" 
+    <div :class="darkMode.isDark ? ' dark dark:bg-darkMode' : 'bg-lightMode'" 
          class="flex justify-center items-center lg:space-y-4 flex-col 
           px-8 py-8 xs:py-4 sm:space-y-2 scroll-smooth xl:h-full"
     >
@@ -15,7 +15,7 @@
                     justify-center items-center bg-blue-100"
         >
            <h1 
-             :class="darkMode.isDark ? 'text-yellow-500' : 'text-purple-600'"
+             :class="darkMode.isDark ? 'text-yellow-500' : 'text-Bpurple'"
              class="lg:text-7xl xs:text-4xl text-center ">
                 Welcome to boyd-Auto
            </h1>
@@ -28,14 +28,14 @@
             </lord-icon>
 
            <p
-             :class="darkMode.isDark ? 'text-yellow-500':'text-purple-600'" 
+             :class="darkMode.isDark ? 'text-yellow-500':'text-Bpurple'" 
              class="lg:text-xl xs:text-lg text-center font-semibold"
             >
             your one stop place where you can get the car of your dreams.
            </p>
 
           
-            <button :class="darkMode.isDark ? 'bg-yellow-500' : 'bg-purple-600' " 
+            <button :class="darkMode.isDark ? 'bg-yellow-500' : 'bg-Bpurple' " 
              class="rounded-sm uppercase font-FT font-semibold w-64 py-2  text-white"
             >
                <h1>get started</h1>
@@ -43,7 +43,7 @@
 
         </div>
        
-       <div :class="darkMode.isDark ? 'text-white' : ''"
+       <div :class="darkMode.isDark ? 'text-white' : ' text-Bpurple'"
         class="text-4xl font-FT uppercase font-semibold pt-16 text-center">
         <h1> Here at boyd-Auto we offer</h1>
        </div>

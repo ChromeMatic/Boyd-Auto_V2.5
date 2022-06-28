@@ -14,7 +14,7 @@
 
   const regRoute = [
     { name:'login', link:'/login'},
-    { name:'signup', link:'/signup'}
+    { name:'signup', link:'/register'}
   ]
 
 </script>
@@ -22,17 +22,17 @@
 <template>
     <div class="sticky top-0 z-50">
       
-     <div :class="darkMode.isDark ?  'dark:bg-innerDark text-white' : '' " 
-      class="px-4 py-2 bg-purple-600 font-FT">
+     <div :class="darkMode.isDark ?  'dark:bg-innerDark text-white' : 'bg-Bpurple' " 
+      class="px-4 py-2  font-FT">
          
-         <nav :class="darkMode.isDark ? 'dark:bg-darkMode' : '' " 
-            class="px-4 py-4 rounded bg-white flex justify-between items-center">
+         <nav :class="darkMode.isDark ? 'dark:bg-darkMode' : 'bg-lightMode text-purple-900' " 
+            class="px-4 py-4 rounded flex justify-between items-center">
         
             <!-- Visible on desktop view -->
             <div  class="hidden md:flex space-x-2 items-center">
                   <img class="h-8 w-8" src="../assets/sport-car.png"/> 
                   <h1 :class="darkMode.isDark ? 'dark:text-white' : '' "
-                      class="uppercase font-semibold text-innerDark">
+                      class="uppercase font-semibold">
                       BoydAuto
                   </h1>
             </div>
@@ -40,7 +40,8 @@
             <!-- Visible on desktop view -->
             <div class="hidden md:flex space-x-4 items-center">
                <div v-for="route in routes" :key="route.name">
-                  <router-link :to="route.link" :class="darkMode.isDark ? 'dark:text-white dark:hover:text-yellow-500' : '' " class="uppercase font-semibold transition text-innerDark hover:text-purple-500">
+                  <router-link :to="route.link" :class="darkMode.isDark ? 'dark:text-white dark:hover:text-yellow-500' : '' " 
+                  class="uppercase font-semibold transition hover:text-purple-300">
                   {{route.name}}
                   </router-link>
                </div>
@@ -50,7 +51,7 @@
             <div class="hidden md:flex space-x-4 items-center">
               <div v-for="reg in regRoute" :key="reg.name">
                <router-link :to="reg.link" :class="darkMode.isDark ? 'dark:text-white dark:hover:text-yellow-500' : '' " 
-                class="uppercase font-semibold transition text-innerDark hover:text-purple-500">
+                class="uppercase font-semibold transition hover:text-purple-300">
                   {{reg.name}}
                </router-link>
               </div>

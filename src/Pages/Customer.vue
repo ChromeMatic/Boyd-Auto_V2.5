@@ -58,12 +58,13 @@
 <template>
   <div  
    :class="darkMode.isDark ? 'dark dark:bg-darkMode' : ''" 
-    class="flex flex-col justify-center items-center " 
+    class="flex flex-col justify-center items-center min-h-screen" 
   >
-    <searchFilter/>
+    
+   <searchFilter/>
 
     <div 
-     :class="darkMode.isDark ? 'dark:bg-darkMode ' : 'bg-white'"
+     :class="darkMode.isDark ? 'dark:bg-darkMode ' : 'bg-lightMode'"
      class="py-16 px-4 grid lg:grid-cols-4 grid-cols-2 gap-2"
     >
         <div 
@@ -88,7 +89,7 @@
           </h2>
 
           <button
-          :class="darkMode.isDark ? 'dark:bg-yellow-500 text-black':'bg-purple-600 text-white'"
+          :class="darkMode.isDark ? 'dark:bg-yellow-500 text-black':'bg-Bpurple text-white'"
            class="rounded-sm px-16"
           >
             <h1 

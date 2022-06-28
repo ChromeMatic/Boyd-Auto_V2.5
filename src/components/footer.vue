@@ -7,7 +7,7 @@
 <template>
      <div 
       :class="darkMode.isDark ? 'dark:bg-innerDark dark:text-white' : ''"
-      class="py-16 flex justify-center items-start font-FT uppercase bg-purple-600 text-white 
+      class="py-16 flex justify-center items-start font-FT uppercase bg-Bpurple text-white 
              font-semibold"
      >
         footer
