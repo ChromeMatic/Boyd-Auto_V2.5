@@ -17,11 +17,11 @@
 
 <template>
   <div
-    :class="darkMode.isDark ? 'dark:bg-innerDark text-white' : 'bg-blue-400'"
+    :class="darkMode.isDark ? 'dark:bg-innerDark text-white' : 'bg-Bpurple'"
     class="py-2 px-4 w-full uppercase font-FT"
   >  
     <div 
-      :class="darkMode.isDark ? 'dark:bg-darkMode text-white' : 'bg-white'"
+      :class="darkMode.isDark ? 'dark:bg-darkMode text-white' : 'bg-lightMode text-Bpurple'"
       class="p-4 flex justify-between items-center space-x-4 rounded"
     >  
 
