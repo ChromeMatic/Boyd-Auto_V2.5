@@ -10,9 +10,9 @@
           px-8 py-8 xs:py-4 sm:space-y-2 scroll-smooth xl:h-full"
     >
       
-        <div :class="darkMode.isDark ? 'dark:bg-innerDark text-white' : ''"
+        <div :class="darkMode.isDark ? 'dark:bg-innerDark text-white' : 'glass_bg'"
              class="lg:py-8 lg:px-16 xs:py-4 xs:px-8 rounded-md uppercase font-FT flex  flex-col space-y-2 
-                    justify-center items-center bg-blue-100"
+                    justify-center items-center"
         >
            <h1 
              :class="darkMode.isDark ? 'text-yellow-500' : 'text-Bpurple'"
@@ -147,3 +147,14 @@
 
     </div>
 </template>
+
+<style scoped>
+    .glass_bg{
+        background: rgba( 219, 234, 254, 0.45 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 7.5px );
+        -webkit-backdrop-filter: blur( 7.5px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+    }
+</style>
