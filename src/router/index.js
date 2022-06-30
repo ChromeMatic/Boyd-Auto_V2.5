@@ -4,6 +4,7 @@ import Dealer from '../Pages/Dealer.vue';
 import CustomerPage from '../Pages/Customer.vue';
 import LoginPage from "../Pages/Login.vue";
 import SignupPage from "../Pages/SignUp.vue"
+import Details from "../Pages/Details.vue"
 
 const routes = [
 
@@ -36,6 +37,12 @@ const routes = [
         path: '/customer',
         name: 'customer',
         component: CustomerPage
+    },
+
+    {
+        path: '/details',
+        name: 'detail',
+        component: Details
     }
 
 ]

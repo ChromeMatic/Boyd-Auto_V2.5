@@ -1,16 +1,17 @@
 <script setup lang="ts">
-  import { ThemeStore } from "../stores/Theme.js"
-  import searchFilter from "../components/searchFilter.vue"
-
+  import { ThemeStore } from "../stores/Theme.js";
+  import { CarDetail } from "../stores/CarDetail.js";
+  import searchFilter from "../components/searchFilter.vue";
+  import CarInfo from '../Interfaces/StoreInterfaces';
+  import { useRouter } from 'vue-router';
+  
+  
   const darkMode = ThemeStore();
+  const carDetail = CarDetail();
 
-  interface car{
-    name: string,
-    price: string,
-    img: string
-  }
+  const nav = useRouter();
 
-  let Cars:car[] = [
+  let Cars:CarInfo[] = [
    {
     name:'nissan gtr r35',
     price:'$6.2 mil JMD',
@@ -52,16 +53,21 @@
     img:'https://images.unsplash.com/photo-1609676671207-d021525a635d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1092&q=80'
    }
   ]
+  
+  function getCarDetails(info:CarInfo){
+    carDetail.setVehicle(info);
+    nav.push("/details");
+  }
 
 </script>
 
 <template>
   <div  
    :class="darkMode.isDark ? 'dark dark:bg-darkMode' : ''" 
-    class="flex flex-col justify-center items-center min-h-screen" 
+   class="flex flex-col justify-center items-center min-h-screen" 
   >
     
-   <searchFilter/>
+    <searchFilter/>
 
     <div 
      :class="darkMode.isDark ? 'dark:bg-darkMode ' : 'bg-lightMode'"
@@ -88,7 +94,7 @@
             Price : {{car.price}}
           </h2>
 
-          <button
+          <button @click="getCarDetails(car)"
           :class="darkMode.isDark ? 'dark:bg-yellow-500 text-black':'bg-Bpurple text-white'"
            class="rounded-sm px-16"
           >
@@ -98,7 +104,6 @@
               view
             </h1>
           </button>
-
         </div>
     </div>
      
