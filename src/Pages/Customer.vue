@@ -64,14 +64,14 @@
 <template>
   <div  
    :class="darkMode.isDark ? 'dark dark:bg-darkMode' : ''" 
-   class="flex flex-col justify-center items-center min-h-screen" 
+   class="flex flex-col justify-center items-center h-full" 
   >
     
     <searchFilter/>
 
     <div 
      :class="darkMode.isDark ? 'dark:bg-darkMode ' : 'bg-lightMode'"
-     class="py-16 px-4 grid lg:grid-cols-4 grid-cols-2 gap-2"
+     class="py-16 px-4 grid lg:grid-cols-4 grid-cols-2 gap-2 w-full"
     >
         <div 
           v-for="car in Cars" :key="car.name"
