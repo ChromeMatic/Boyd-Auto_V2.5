@@ -64,7 +64,7 @@
 <template>
   <div  
    :class="darkMode.isDark ? 'dark dark:bg-darkMode' : ''" 
-   class="flex flex-col justify-center items-center min-h-screen" 
+   class="flex flex-col justify-center items-center h-full" 
   >
     
     <searchFilter/>

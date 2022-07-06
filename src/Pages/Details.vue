@@ -9,7 +9,7 @@
 <template>
   <div
    :class="darkMode.isDark ? 'dark:bg-darkMode dark:text-white' : 'bg-lightMode'" 
-   class="flex flex-col justify-center items-center min-h-screen w-full py-8 px-8 font-FT uppercase"
+   class="flex flex-col justify-center items-center min-h-full w-full py-8 px-8 font-FT uppercase"
   >
     
     <img 

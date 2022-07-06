@@ -7,7 +7,7 @@
 <template>
  <div 
   :class="darkMode.isDark ? 'dark dark:bg-darkMode' : '' " 
-  class="flex justify-center items-center min-h-screen"
+  class="flex justify-center items-center h-full"
   >
     <h1 
       :class="darkMode.isDark ? 'dark:text-white' : ''" 
