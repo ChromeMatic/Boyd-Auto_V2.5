@@ -1,24 +1,24 @@
 <script setup lang="ts">
   import { ThemeStore } from "../stores/Theme.js"
-  import {ref,computed} from "vue"
+  import {ref} from "vue"
+  import User from "../Interfaces/UserInterface"
 
   const darkMode = ThemeStore();
   
-  interface user {email:string,password:string}
-
   let forgetPassword = ref(false);
-  
-  let userFrom:user = {email:'',password:''}
  
+  let userFrom:User = {email:'',password:''}
+
 </script>
 
 <template>
    <div
     :class="darkMode.isDark ? 'dark:bg-darkMode text-white' : 'text-purple-800 bg-lightMode' "
-    class=" flex flex-col space-y-4 items-center px-2 min-h-screen font-FT uppercase"
+    class=" flex flex-col space-y-2 items-center h-full py-8 font-FT uppercase"
    >
+       
       <div 
-       class="px-4 py-1 rounded-md lg:mt-4 mt-8"
+       class="px-4 py-1 rounded-md lg:mt-4 mt-1"
        :class="darkMode.isDark ? 'bg-innerDark' : 'bg-blue-100'"
       >
          <img src="../assets/sport-car.png" class="h-28 w-28"/>
@@ -34,7 +34,7 @@
 
       <div
         :class="darkMode.isDark ? 'bg-innerDark':'bg-blue-100'"
-        class="rounded flex flex-col justify-center items-center py-4 lg:px-16 px-8 space-y-8"
+        class="rounded flex flex-col justify-center items-center px-8 py-4 lg:px-16 space-y-8 "
       >
          <h1 class="text-4xl font-semibold">LOGIN</h1>
          
@@ -46,6 +46,7 @@
                placeholder="email" v-model="userFrom.email" 
                type="email"
             />
+
             <input 
                class="h-8 lg:w-96 w-64 p-2 rounded-md" 
                :class="darkMode.isDark ? 'bg-darkMode':''" 
@@ -118,4 +119,3 @@
 
    </div>
 </template>
-
